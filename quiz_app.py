@@ -3,23 +3,35 @@ import streamlit as st
 # Questions
 questions = [
     {
-        "question": "What is the capital of France?",
-        "options": ["Berlin", "Madrid", "Paris", "Rome"],
-        "answer": "Paris"
+        "question": "What is my nickname?",
+        "options": ["Mo", "Pooja", "Lonely", "Jey"],
+        "answer": "Lonely"
+    },
+
+    {
+        "question": "What is my birth month?",
+        "options": ["January", "February", "October", "July"],
+        "answer": "January"
     },
     {
-        "question": "What is 5 + 3?",
-        "options": ["5", "8", "10", "6"],
-        "answer": "8"
+        "question": "Where do I presently reside?",
+        "options": ["Canada", "England", "Iran", "Nigeria"],
+        "answer": "England"
+    },
+    
+    {
+        "question": "Who is my Mentor?",
+        "options": ["Dayo", "Ayor", "Senior", "Myself"],
+        "answer": "Senior"
     },
     {
-        "question": "Which language is used for web apps?",
+        "question": "Which Programming Language do use I prefer?",
         "options": ["Python", "JavaScript", "C++", "All of the above"],
-        "answer": "All of the above"
+        "answer": "Python"
     }
 ]
 
-st.title("🧠 Quiz Game")
+st.title("🧠 Quiz Game 🧠 How well do you know me?")
 
 # Session state
 if "score" not in st.session_state:
@@ -46,7 +58,7 @@ if st.session_state.q_index < len(questions):
         st.rerun()
 
 else:
-    st.write(f"🎉 Quiz Finished! Your score: {st.session_state.score}/{len(questions)}")
+    st.write(f"🎉 Quiz Finished! ❤️ You know me well!❤️ Your score: {st.session_state.score}/{len(questions)}")
 
     if st.button("Restart"):
         st.session_state.q_index = 0
